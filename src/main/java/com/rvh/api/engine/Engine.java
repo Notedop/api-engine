@@ -2,8 +2,6 @@ package com.rvh.api.engine;
 
 import com.rvh.api.engine.authentication.AuthenticationDetails;
 import com.rvh.api.engine.search.*;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +11,6 @@ import java.util.Map;
 public abstract class Engine {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());
-    protected final CloseableHttpClient httpClient = HttpClients.createDefault();
     protected SearchResult searchResult;
     protected boolean authenticationRequired;
     private String engineName;
